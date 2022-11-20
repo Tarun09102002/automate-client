@@ -1,0 +1,19 @@
+.map-container {
+    height: 100vh;
+    overflow: hidden;
+
+    .marker {
+        background-image: url('../../images/mapbox-icon.png');
+        background-size: cover;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+#map-display {
+    height: 700px;
+    width: 500px;
+    overflow: hidden;
+}

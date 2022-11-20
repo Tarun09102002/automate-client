@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0;
+
+    .input_container {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        // align-items: center;
+        justify-content: center;
+        height: 700px;
+        // background-image: image('../../images/landing.jpeg');
+        background-image: url('../../images/landing.jpeg');
+        background-size: cover;
+
+        .input {
+            width: 600px;
+            height: 400px;
+            background-color: white;
+            margin-left: 50px;
+            overflow: auto;
+
+            .title {
+                font-size: 2.3rem;
+                font-weight: 700;
+                margin-top: 20px;
+                margin-left: 50px;
+            }
+
+            input {
+                width: 70%;
+                height: 50px;
+                background-color: #f2f2f2;
+                border-radius: 5px;
+                border: none;
+                padding: 0 10px;
+                font-size: 1.3rem;
+                margin-left: 50px;
+                margin-top: 20px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+
+            .dropdown_container {
+                display: flex;
+                flex-direction: column;
+                width: 440px;
+                background-color: #f2f2f2;
+                border-radius: 5px;
+                border: none;
+                // padding: 0 10px;
+                margin-left: 50px;
+                position: absolute;
+
+                .dropdown {
+                    padding: 10px 20px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #e6e6e6;
+                    }
+                }
+
+            }
+
+            button {
+                min-width: 40%;
+                height: 50px;
+                margin-top: 40px;
+                margin-left: 50px;
+                font-size: 1.2rem;
+                border: 1px solid black;
+                border-radius: 5px;
+                background-color: black;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+    }
+}
