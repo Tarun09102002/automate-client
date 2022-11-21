@@ -12,6 +12,7 @@ function MapComponent({ users, userIndex, setUserIndex, user }) {
     const [userLocation, setUserLocation] = useState(null)
 
     useEffect(() => {
+        console.log(process.env.REACT_APP_MAPBOX_TOKEN)
         navigator.geolocation.getCurrentPosition(function (position) {
             setUserLocation({
                 latitude: position.coords.latitude,
@@ -34,13 +35,14 @@ function MapComponent({ users, userIndex, setUserIndex, user }) {
                     longitude: user?.startLocation.coordinates[0],
                     zoom: 15
                 }}
-                mapStyle="mapbox://styles/mapbox/streets-v11">
+                mapStyle="mapbox://styles/mapbox/streets-v9">
                 <NavigationControl />
                 <GeolocateControl
                     onGeolocate={location => {
                         setUserLocation({ ...userLocation, latitude: location.coords.latitude, longitude: location.coords.longitude })
                     }}
                 />
+
                 {userIndex >= 0 &&
                     <Marker latitude={users[userIndex].endLocation.coordinates[1]} longitude={users[userIndex].endLocation.coordinates[0]}
                         offsetLeft={-20} offsetTop={-40} >
