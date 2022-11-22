@@ -40,7 +40,7 @@ function LoginComponent() {
             // }
             if (error === '') {
                 // else {
-                alert('User logged in successfully')
+                alert('User logged in successfully!!!!')
                 sessionStorage.setItem('userid', res.data.token)
                 CometChat.login(res.data.token, authKey).then(
                     user => {
